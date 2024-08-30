@@ -13,6 +13,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Button } from "@/components/ui/button"
+import { Menu, ShoppingCart, User } from "lucide-react"
 
 const categories: { title: string; href: string; description: string }[] = [
   {
@@ -51,6 +54,44 @@ export default function Navbar() {
   return (
     <NavigationMenu className="bg-white dark:bg-gray-900 shadow-lg py-2 sm:py-4 px-4 sm:px-6 lg:px-8 fixed top-0 left-0 right-0 w-full max-w-[100vw] z-50 transition-all duration-300 ease-in-out">
       <NavigationMenuList className="flex items-center justify-between w-full max-w-7xl mx-auto">
+        <NavigationMenuItem className="md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+              <nav className="flex flex-col space-y-4">
+                <Link href="/" className="text-lg font-bold">
+                  Kshetri-Mart
+                </Link>
+                {categories.map((category) => (
+                  <Link
+                    key={category.title}
+                    href={category.href}
+                    className="text-sm"
+                  >
+                    {category.title}
+                  </Link>
+                ))}
+                <Link href="/deals" className="text-sm">
+                  Deals
+                </Link>
+                <Link href="/new-arrivals" className="text-sm">
+                  New Arrivals
+                </Link>
+                <Link href="/account" className="text-sm">
+                  Account
+                </Link>
+                <Link href="/cart" className="text-sm">
+                  Cart
+                </Link>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </NavigationMenuItem>
         <NavigationMenuItem className="mr-4">
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-xl font-bold")}>
@@ -74,14 +115,14 @@ export default function Navbar() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem className="hidden sm:flex">
+        <NavigationMenuItem className="hidden md:flex">
           <Link href="/deals" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Deals
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem className="hidden sm:flex">
+        <NavigationMenuItem className="hidden md:flex">
           <Link href="/new-arrivals" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               New Arrivals
@@ -91,16 +132,18 @@ export default function Navbar() {
         <NavigationMenuItem className="flex-grow mx-4">
           <Input placeholder="Search products..." className="w-full max-w-md" />
         </NavigationMenuItem>
-        <NavigationMenuItem className="hidden sm:flex">
+        <NavigationMenuItem className="hidden md:flex">
           <Link href="/account" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Account
+              <User className="mr-2 h-4 w-4" />
+              Signin
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/cart" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <ShoppingCart className="mr-2 h-4 w-4" />
               Cart
             </NavigationMenuLink>
           </Link>

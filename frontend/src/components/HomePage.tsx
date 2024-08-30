@@ -7,10 +7,6 @@ import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 
 
-// import { Grid } from "@/components/ui/grid"
-// import { Flex } from "@/components/ui/flex"
-
-
 const featuredCategories = [
   { name: "Electronics", image: "/images/electronics.png" },
   { name: "Fashion", image: "/images/fashion.png" },
@@ -19,7 +15,7 @@ const featuredCategories = [
 
 const recommendedProducts = [
   { name: "Smartphone X", price: 599, image: "/images/smartphonex.png" },
-  { name: "Laptop Pro", price: 1299, image: "/images/laptoppro.webp" },
+  { name: "Laptop Pro", price: 1299, image: "/images/laptoppro.png" },
   { name: "Wireless Earbuds", price: 129, image: "/images/earbuds.png" },
   { name: "Smart Watch", price: 199, image: "/images/smartwatch.png" },
 ]
@@ -109,7 +105,7 @@ export default function HomePage() {
       {/* Footer */}
       <Separator className="my-8" />
       <footer className="text-center text-sm text-gray-500">
-        <p>&copy; 2023 AI-Powered E-commerce. All rights reserved.</p>
+        <p>&copy; 2023 AI-Powered E-commerce. All rights reserved by KshetriAI.</p>
       </footer>
     </div>
   )
