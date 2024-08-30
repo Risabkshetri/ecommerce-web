@@ -9,10 +9,10 @@ const config = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
 	],
-  plugins: [
-    require("tailwindcss-animate"),
+  // plugins: [
+  //   require("tailwindcss-animate"),
     
-  ],
+  // ],
   prefix: "",
   theme: {
     container: {

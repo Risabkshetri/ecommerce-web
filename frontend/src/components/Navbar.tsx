@@ -133,10 +133,10 @@ export default function Navbar() {
           <Input placeholder="Search products..." className="w-full max-w-md" />
         </NavigationMenuItem>
         <NavigationMenuItem className="hidden md:flex">
-          <Link href="/account" legacyBehavior passHref>
+          <Link href="/sign-up" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               <User className="mr-2 h-4 w-4" />
-              Signin
+              Signup
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
