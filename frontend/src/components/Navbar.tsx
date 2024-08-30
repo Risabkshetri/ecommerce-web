@@ -82,10 +82,12 @@ export default function Navbar() {
                 <Link href="/new-arrivals" className="text-sm">
                   New Arrivals
                 </Link>
-                <Link href="/account" className="text-sm">
-                  Account
+                <Link href="/sign-up" className="text-sm">
+                <User className="mr-2 h-4 w-4" />
+                 Signup
                 </Link>
                 <Link href="/cart" className="text-sm">
+                <ShoppingCart className="mr-2 h-4 w-4" />
                   Cart
                 </Link>
               </nav>
