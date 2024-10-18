@@ -50,7 +50,7 @@ const categories: { title: string; href: string; description: string }[] = [
   },
 ]
 
-export default function Navbar() {
+export default function Navbar(){
   return (
     <NavigationMenu className="bg-white dark:bg-gray-900 shadow-lg py-2 sm:py-4 px-4 sm:px-6 lg:px-8 fixed top-0 left-0 right-0 w-full max-w-[100vw] z-50 transition-all duration-300 ease-in-out">
       <NavigationMenuList className="flex items-center justify-between w-full max-w-7xl mx-auto">
@@ -65,7 +65,7 @@ export default function Navbar() {
             <SheetContent side="left" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col space-y-4">
                 <Link href="/" className="text-lg font-bold">
-                  Kshetri-Mart
+                  Electro Electornics Store
                 </Link>
                 {categories.map((category) => (
                   <Link
@@ -97,7 +97,7 @@ export default function Navbar() {
         <NavigationMenuItem className="mr-4">
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-xl font-bold")}>
-            Kshetri-Mart
+            Electro Electornics Store
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
