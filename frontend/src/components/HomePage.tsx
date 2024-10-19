@@ -105,7 +105,7 @@ export default function HomePage() {
       {/* Footer */}
       <Separator className="my-8" />
       <footer className="text-center text-sm text-gray-500">
-        <p>&copy; 2023 AI-Powered E-commerce. All rights reserved by KshetriAI.</p>
+        <p>&copy; 2023 AI-Powered E-commerce. All rights reserved by Electro Electronics Store</p>
       </footer>
     </div>
   )
