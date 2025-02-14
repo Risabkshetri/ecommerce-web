@@ -19,36 +19,27 @@ import { Menu, ShoppingCart, User } from "lucide-react"
 
 const categories: { title: string; href: string; description: string }[] = [
   {
-    title: "Electronics",
-    href: "/category/electronics",
-    description: "Discover the latest gadgets and tech innovations.",
+    title: "Smartphones & Accessories",
+    href: "/category/smartphones-accessories",
+    description: "Find the latest smartphones, cases, chargers, and more.",
   },
   {
-    title: "Fashion",
-    href: "/category/fashion",
-    description: "Explore trendy clothing and accessories for all styles.",
+    title: "Laptops & Computers",
+    href: "/category/laptops-computers",
+    description: "Shop for high-performance laptops, desktops, and accessories.",
   },
   {
-    title: "Home & Living",
-    href: "/category/home-living",
-    description: "Find everything you need to make your house a home.",
+    title: "Audio & Headphones",
+    href: "/category/audio-headphones",
+    description: "Discover premium speakers, earbuds, and headphones.",
   },
   {
-    title: "Beauty & Health",
-    href: "/category/beauty-health",
-    description: "Shop for premium beauty products and wellness essentials.",
+    title: "Gaming & Consoles",
+    href: "/category/gaming-consoles",
+    description: "Get the latest gaming consoles, accessories, and games.",
   },
-  {
-    title: "Sports & Outdoors",
-    href: "/category/sports-outdoors",
-    description: "Gear up for your active lifestyle and outdoor adventures.",
-  },
-  {
-    title: "Books & Stationery",
-    href: "/category/books-stationery",
-    description: "Dive into a world of knowledge and creativity.",
-  },
-]
+];
+
 
 export default function Navbar(){
   return (
@@ -65,7 +56,7 @@ export default function Navbar(){
             <SheetContent side="left" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col space-y-4">
                 <Link href="/" className="text-lg font-bold">
-                  Electro Electornics Store
+                  Electro Store
                 </Link>
                 {categories.map((category) => (
                   <Link
@@ -79,8 +70,8 @@ export default function Navbar(){
                 <Link href="/deals" className="text-sm">
                   Deals
                 </Link>
-                <Link href="/new-arrivals" className="text-sm">
-                  New Arrivals
+                <Link href="/products" className="text-sm">
+                  Products
                 </Link>
                 <Link href="/sign-up" className="text-sm">
                 <User className="mr-2 h-4 w-4" />
@@ -97,7 +88,7 @@ export default function Navbar(){
         <NavigationMenuItem className="mr-4">
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-xl font-bold")}>
-            Electro Electornics Store
+            Electro Store
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -125,9 +116,9 @@ export default function Navbar(){
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem className="hidden md:flex">
-          <Link href="/new-arrivals" legacyBehavior passHref>
+          <Link href="/products" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              New Arrivals
+              products
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

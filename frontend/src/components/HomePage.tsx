@@ -3,14 +3,13 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 
 
 const featuredCategories = [
-  { name: "Electronics", image: "/images/electronics.png" },
-  { name: "Fashion", image: "/images/fashion.png" },
-  { name: "Home & Living", image: "/images/home-living.png" },
+  { name: "Gaming Laptop", image: "/images/gaming-laptop.jpg" },
+  { name: "Iphone 16", image: "/images/iphone16.jpg" },
+  { name: "Samsung S25 Ultra", image: "/images/samsungultra.jpg" },
 ]
 
 const recommendedProducts = [
