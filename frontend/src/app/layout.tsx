@@ -5,7 +5,7 @@ import AIChatbot from "@/components/Chatbot";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Elctro Store",
+  title: "Elctro Store", 
   description: "AI Based Electro Store",
 };
 
