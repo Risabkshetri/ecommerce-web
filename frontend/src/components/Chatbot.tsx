@@ -108,12 +108,12 @@ End your response with a relevant follow-up question if needed.`;
     try {
         const conversationHistory = messages.map(msg => {
         if (msg.role === 'user') {
-          return { role: 'user', content: msg.content };
+          return { role: 'user', content: msg.content } as Message;
         } else {
           
-          return { role: 'assistant', content: msg.content };
+          return { role: 'system', content: msg.content } as Message;
         }
-      }).filter(msg => msg.role !== 'system' || messages.indexOf(msg) === 0);
+      }).filter((msg: Message) => msg.role !== 'system' || messages.indexOf(msg) === 0);
 
       const apiResponse = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
