@@ -40,7 +40,7 @@ const ElectronicsMenu: React.FC = () => {
   const endIndex = startIndex + ITEMS_PER_PAGE;
   const currentItems = data.electronicsGadgets.slice(startIndex, endIndex);
 
-  // Generate page numbers for pagination
+
   const getPageNumbers = () => {
     const pages = [];
     for (let i = 1; i <= totalPages; i++) {
