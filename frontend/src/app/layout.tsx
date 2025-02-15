@@ -5,33 +5,25 @@ import { cn } from "@/lib/utils"
 import AIChatbot from "@/components/Chatbot";
 import Navbar from "@/components/Navbar";
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Elctro Store",
+  title: "Electro Store",
   description: "AI Based Electro Store",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body 
-       className={cn(
-        "min-h-screen bg-background font-sans antialiased",
-        inter.variable
-      )}
-      >
+      <body className={cn("min-h-screen bg-background", inter.className)}>
         <Navbar />
-        <AIChatbot />
         {children}
-        </body>
+        <AIChatbot />
+      </body>
     </html>
   );
 }
