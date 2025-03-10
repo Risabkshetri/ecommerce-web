@@ -13,8 +13,11 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import electronicsGadgets from "../../data/dummydata.json";
+import { useCart } from '../context/CartContext';
+import { toast } from 'react-toastify';
 
 interface Gadget {
+  id: string;
   name: string;
   price: number;
   image: string;
@@ -23,6 +26,7 @@ interface Gadget {
 const ITEMS_PER_PAGE = 8;
 
 const ElectronicsMenu: React.FC = () => {
+  const { addToCart, cart } = useCart();
   const data: { electronicsGadgets: Gadget[] } = electronicsGadgets;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -40,6 +44,26 @@ const ElectronicsMenu: React.FC = () => {
   const endIndex = startIndex + ITEMS_PER_PAGE;
   const currentItems = data.electronicsGadgets.slice(startIndex, endIndex);
 
+  const handleAddToCart = (item: Gadget) => {
+    try {
+      addToCart({
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        image: item.image,
+        quantity: 0
+      });
+      
+      toast(`${item.name} has been added to you cart `);
+    } catch (error) {
+      toast('Failed to add item to cart');
+    }
+  };
+
+  const getItemQuantityInCart = (itemId: string): number => {
+    const cartItem = cart.find(item => item.id === itemId);
+    return cartItem ? cartItem.quantity : 0;
+  };
 
   const getPageNumbers = () => {
     const pages = [];
@@ -67,33 +91,40 @@ const ElectronicsMenu: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {currentItems.map((item, index) => (
-          <Card key={index} className="flex flex-col justify-between hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-                <img
-                  src={`${item.image}`}
-                  alt={item.name}
-                  className="object-contain h-40 w-40"
-                />
-              </div>
-              <CardTitle className="text-lg">{item.name}</CardTitle>
-            </CardHeader>
-            
-            <CardContent>
-              <p className="text-2xl font-bold text-primary">
-                {formatPrice(item.price)}
-              </p>
-            </CardContent>
+        {currentItems.map((item) => {
+          const quantityInCart = getItemQuantityInCart(item.id);
+          
+          return (
+            <Card key={item.id} className="flex flex-col justify-between hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="object-contain h-40 w-40"
+                  />
+                </div>
+                <CardTitle className="text-lg">{item.name}</CardTitle>
+              </CardHeader>
+              
+              <CardContent>
+                <p className="text-2xl font-bold text-primary">
+                  {formatPrice(item.price)}
+                </p>
+              </CardContent>
 
-            <CardFooter>
-              <Button className="w-full">
-                <ShoppingCart className="mr-2 h-4 w-4" />
-                Add to Cart
-              </Button>
-            </CardFooter>
-          </Card>
-        ))}
+              <CardFooter>
+                <Button 
+                  className="w-full"
+                  onClick={() => handleAddToCart(item)}
+                >
+                  <ShoppingCart className="mr-2 h-4 w-4" />
+                  {quantityInCart > 0 ? 'Add Another' : 'Add to Cart'}
+                </Button>
+              </CardFooter>
+            </Card>
+          );
+        })}
       </div>
 
       <div className="mt-8 flex justify-center">
