@@ -12,12 +12,13 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import electronicsGadgets from "../../data/dummydata.json";
+import electronicsGadgets from "../../data/dummydata.json"
 import { useCart } from '../context/CartContext';
 import { toast } from 'react-toastify';
+import Image from 'next/image';
 
 interface Gadget {
-  id: string;
+  id?: string;
   name: string;
   price: number;
   image: string;
@@ -47,7 +48,7 @@ const ElectronicsMenu: React.FC = () => {
   const handleAddToCart = (item: Gadget) => {
     try {
       addToCart({
-        id: item.id,
+        id: item.id ?? '',
         name: item.name,
         price: item.price,
         image: item.image,
@@ -98,7 +99,7 @@ const ElectronicsMenu: React.FC = () => {
             <Card key={item.id} className="flex flex-col justify-between hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-full h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.name}
                     className="object-contain h-40 w-40"
