@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react';
 
 interface CartItem {
   id: string | number;
-  name: string
+  name: string;
   price: number;
   image: string;
+  quantity: number; // Added quantity as a required property
   [key: string]: any;
 }
 
@@ -37,7 +38,7 @@ export function useCart() {
         );
       }
       console.log(currentCart);
-      return [...currentCart, {...item, quantity: 1} as CartItem];
+      return [...currentCart, {...item, quantity: 1}];
     });
   };
 
