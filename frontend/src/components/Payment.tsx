@@ -23,13 +23,13 @@ interface PaymentFormData {
   email: string;
 }
 
-export default function Payment({ 
+export default function Payment({
   defaultAmount = "",
   orderId,
   onPaymentSuccess
 }: PaymentProps) {
 
-  
+
   // State with proper typing
   const [formData, setFormData] = useState<PaymentFormData>({
     name: "",
@@ -52,27 +52,27 @@ export default function Payment({
   const handlePayment = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    
+
     try {
       // Generate unique transaction ID using the provided orderId
       const transactionId = `${orderId}-${Date.now()}`;
-      
+
       // Parse amount as number for validation
       const amountValue = parseFloat(formData.amount);
-      
+
       // Validate form data
       if (!formData.name.trim()) {
         throw new Error("Name is required");
       }
-      
+
       if (!formData.phone.trim() || !/^\d{10}$/.test(formData.phone)) {
         throw new Error("Valid 10-digit phone number is required");
       }
-      
+
       if (isNaN(amountValue) || amountValue <= 0) {
         throw new Error("Valid amount is required");
       }
-      
+
       // Call the payment service
       const redirectUrl = await initiatePayment({
         name: formData.name,
@@ -81,19 +81,25 @@ export default function Payment({
         transactionId,
         email: formData.email
       });
-      
+
       // Redirect to payment page
       if (redirectUrl) {
-        toast({
-          title: "Payment Initiated",
-          description: "Redirecting you to the payment gateway...",
+        toast("Redirecting you to the payment gateway...", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
         });
-        
+
         // Allow toast to show before redirect
         setTimeout(() => {
           window.location.href = redirectUrl;
         }, 1000);
-        
+
         // Call the success callback if provided
         if (onPaymentSuccess) {
           onPaymentSuccess();
@@ -101,10 +107,15 @@ export default function Payment({
       }
     } catch (error) {
       console.error("Payment initiation failed:", error);
-      toast({
-        variant: "destructive",
-        title: "Payment Failed",
-        description: error instanceof Error ? error.message : "Payment initiation failed"
+      toast("Payment initiation failed", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
       });
     } finally {
       setLoading(false);
@@ -130,7 +141,7 @@ export default function Payment({
               placeholder="Enter your full name"
             />
           </div>
-          
+
           <div className="space-y-2">
             <Label htmlFor="email">Email Address</Label>
             <Input
@@ -143,7 +154,7 @@ export default function Payment({
               placeholder="Enter your email"
             />
           </div>
-          
+
           <div className="space-y-2">
             <Label htmlFor="phone">Mobile Number</Label>
             <Input
@@ -157,7 +168,7 @@ export default function Payment({
               placeholder="10-digit mobile number"
             />
           </div>
-          
+
           <div className="space-y-2">
             <Label htmlFor="amount">Amount (₹)</Label>
             <Input
@@ -173,7 +184,7 @@ export default function Payment({
               disabled={!!defaultAmount}
             />
           </div>
-          
+
           <Button
             type="submit"
             disabled={loading}
@@ -181,7 +192,7 @@ export default function Payment({
           >
             {loading ? "Processing..." : "Pay Now"}
           </Button>
-          
+
           <div className="mt-4 text-center text-sm text-gray-500">
             <p>Your payment is secure and encrypted</p>
             <div className="flex justify-center space-x-2 mt-2">
