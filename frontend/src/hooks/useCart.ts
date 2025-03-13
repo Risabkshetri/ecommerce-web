@@ -6,7 +6,7 @@ interface CartItem {
   name: string;
   price: number;
   image: string;
-  quantity: number; // Added quantity as a required property
+  quantity: number;
   [key: string]: any;
 }
 
@@ -38,7 +38,18 @@ export function useCart() {
         );
       }
       console.log(currentCart);
-      return [...currentCart, {...item, quantity: 1}];
+      
+      // Create the new item with all the properties explicitly typed
+      const newItem = {
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        image: item.image,
+        quantity: 1,
+        ...item // This will add any additional properties from item
+      } as CartItem;
+      
+      return [...currentCart, newItem];
     });
   };
 
