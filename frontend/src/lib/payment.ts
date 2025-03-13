@@ -13,7 +13,6 @@ export interface PaymentInitiateRequest {
   productInfo?: string;
 }
 
-// Define types for PhonePe API response
 interface PhonePeResponse {
   success: boolean;
   code: string;
