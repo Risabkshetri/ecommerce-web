@@ -34,6 +34,7 @@ const AIChatbot: React.FC = () => {
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   const companyContextPrompt: string = `
+
 You are an AI assistant for Electro Store. Structure your responses in the following format:
 
 [THINKING]
@@ -66,7 +67,8 @@ Here are the best options within your budget:
 ### Delivery Information
 We offer free delivery in Faridabad within 24 hours.
 
-End your response with a relevant follow-up question if needed.`;
+End your response with a relevant follow-up question if needed.
+`;
 
   const initialMessages: Message[] = [
     {

@@ -24,7 +24,7 @@ const OrderSummary: React.FC<OrderSummaryProps> = ({ order, onProceedToPayment }
     <div className="bg-white rounded-lg p-6 shadow-md">
       <h3 className="text-xl font-bold mb-4">Order Summary</h3>
       <p>Total Items: {order.items.length}</p>
-      <p>Total Price: ${total.toFixed(2)}</p>
+      <p>Total Price: ₹{total.toFixed(2)}</p>
       <p>Delivery Address: {order.customerDetails.address}</p>
       <Button onClick={onProceedToPayment} className="mt-4 w-full">
         Proceed to Payment
