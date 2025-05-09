@@ -1,53 +1,298 @@
 {
-    "electronicsGadgets": [
-      { "name": "Smartphone X", "price": 65999, "image": "/images/products/Smartphone.jpg" },
-      { "name": "Laptop Pro", "price": 124999, "image": "/images/products/Laptop Pro.jpg" },
-      { "name": "Wireless Earbuds", "price": 11999, "image": "/images/products/Earbuds.jpg" },
-      { "name": "Smart Watch", "price": 24999, "image": "/images/products/Smart watch.jpg" },
-      { "name": "Tablet Plus", "price": 49999, "image": "/images/products/Tablet plus.png" },
-      { "name": "Gaming Console Z", "price": 42999, "image": "/images/products/console.jpg" },
-      { "name": "Bluetooth Speaker", "price": 10999, "image": "/images/products/Bluetooth Speaker.jpg" },
-      { "name": "4K Smart TV", "price": 79999, "image": "/images/products/electronics.png" },
-      { "name": "VR Headset", "price": 34999, "image": "/images/products/VR headset.jpg" },
-      { "name": "Noise Cancelling Headphones", "price": 24999, "image": "/images/products/Noise Cancelling Headphones.webp" },
-      { "name": "Portable Charger", "price": 4999, "image": "/images/products/Portable Charger.jpg" },
-      { "name": "Smart Home Hub", "price": 14999, "image": "/images/products/Smart Home Hub.webp" },
-      { "name": "Drone Pro", "price": 74999, "image": "/images/products/Drone Pro.jpg" },
-      { "name": "Action Camera", "price": 27999, "image": "/images/products/Action Camera.jpg" },
-      { "name": "E-Reader", "price": 14999, "image": "/images/products/E-Reader.jpg" },
-      { "name": "Gaming Mouse", "price": 6999, "image": "/images/products/Gaming Mouse.jpg" },
-      { "name": "Mechanical Keyboard", "price": 9999, "image": "/images/products/Mechanical Keyboard.jpg" },
-      { "name": "Smart Light Bulbs", "price": 4999, "image": "/images/products/Smart Led Bulb.jpg" },
-      { "name": "Wireless Charging Pad", "price": 2999, "image": "/images/products/Wireless Charging Pad.webp" },
-      { "name": "Digital Drawing Tablet", "price": 34999, "image": "/images/products/E-Reader.jpg" },
-      { "name": "Security Camera", "price": 17999, "image": "/images/products/Security Camera.jpg" },
-      { "name": "Smart Door Lock", "price": 15999, "image": "/images/products/Smart Door Lock.jpg" },
-      { "name": "Robot Vacuum", "price": 34999, "image": "/images/products/Robot Vacuum.jpg" },
-      { "name": "Car Dash Cam", "price": 11999, "image": "/images/products/Car Dash Cam.jpg" },
-      { "name": "Smart Thermostat", "price": 16999, "image": "/images/products/Smart Thermostat.jpg" },
-      { "name": "Fitness Tracker", "price": 8999, "image": "/images/products/Fitness Tracker.jpg" },
-      { "name": "Streaming Stick", "price": 5999, "image": "/images/products/Streaming Stick.webp" },
-      { "name": "External SSD 1TB", "price": 10999, "image": "/images/products/External SSD 1TB.jpg" },
-      { "name": "Portable Projector", "price": 25999, "image": "/images/products/Portable Projector.webp" },
-      { "name": "USB-C Hub", "price": 4999, "image": "/images/products/USB-C Hub.webp" },
-      { "name": "Smart Coffee Maker", "price": 12999, "image": "/images/products/Smart Coffee Maker.webp" },
-      { "name": "Electric Toothbrush", "price": 5999, "image": "/images/products/Electric Toothbrush.jpg" },
-      { "name": "Wireless Gaming Controller", "price": 6999, "image": "/images/products/Wireless Gaming Controller.jpg" },
-      { "name": "Smart Scale", "price": 5999, "image": "/images/products/Smart Scale.jpg" },
-      { "name": "Mini PC", "price": 27999, "image": "/images/products/Mini PC.jpg" },
-      { "name": "Home Theater System", "price": 64999, "image": "/images/products/Home Theater System.jpg" },
-      { "name": "Smart Mirror", "price": 29999, "image": "/images/products/Smart Mirror.jpg" },
-      { "name": "Electric Scooter", "price": 79999, "image": "/images/products/Electric Scooter.jpg" },
-      { "name": "3D Printer", "price": 49999, "image": "/images/products/3D Printer.jpg" },
-      { "name": "Smart Bike Helmet", "price": 13999, "image": "/images/products/Smart Bike Helmet.jpg" },
-      { "name": "Portable Air Purifier", "price": 9999, "image": "/images/products/Portable Air Purifier.jpeg" },
-      { "name": "Handheld Vacuum", "price": 8999, "image": "/images/products/Handheld Vacuum.jpg" },
-      { "name": "Laser Printer", "price": 24999, "image": "/images/products/Laser Printer.jpg" },
-      { "name": "Video Doorbell", "price": 15999, "image": "/images/products/Video Doorbell.jpg" },
-      { "name": "Smart Pet Feeder", "price": 9999, "image": "/images/products/Smart Pet Feeder.jpg" },
-      { "name": "Noise Machine", "price": 4999, "image": "/images/products/Noise Machine.jpg" },
-      { "name": "Smart Garden Kit", "price": 21999, "image": "/images/products/Smart Garden Kit.jpg" },
-      { "name": "Digital Notepad", "price": 14999, "image": "/images/products/Digital Notepad.jpg" },
-      { "name": "Wireless HDMI Extender", "price": 12999, "image": "/images/products/Wireless HDMI Extender.jpg" }
-    ]
-  }
+  "electronicsGadgets": [
+    {
+      "name": "Smartphone X",
+      "price": 65999,
+      "image": "/images/products/Smartphone.jpg",
+      "description": "A high-performance smartphone with a 6.7-inch AMOLED display (120Hz), Snapdragon 8 Gen 2 processor, 12GB RAM, 256GB storage, triple rear camera (108MP + 12MP + 8MP), 5000mAh battery with 65W fast charging, 5G connectivity, WiFi 6E, and Bluetooth 5.3."
+    },
+    {
+      "name": "Laptop Pro",
+      "price": 124999,
+      "image": "/images/products/Laptop Pro.jpg",
+      "description": "A powerful laptop designed for professionals with a 16-inch Retina display (120Hz), Intel Core i9 13th Gen processor, 32GB RAM, 1TB SSD storage, NVIDIA RTX 4070 GPU, all-day battery life with fast charging, WiFi 6E, Thunderbolt 4, and USB-C support."
+    },
+    {
+      "name": "Wireless Earbuds",
+      "price": 11999,
+      "image": "/images/products/Earbuds.jpg",
+      "description": "True wireless earbuds featuring 10mm dynamic drivers for deep bass, Bluetooth 5.3 with low-latency mode, active noise cancellation (ANC), up to 30 hours battery life with case, and IPX5 water resistance."
+    },
+    {
+      "name": "Smart Watch",
+      "price": 24999,
+      "image": "/images/products/Smart watch.jpg",
+      "description": "A premium smartwatch with a 1.78-inch AMOLED always-on display, heart rate, SpO2, and ECG monitoring, built-in GPS, NFC, voice assistant support, water resistance up to 50 meters, and up to 10-day battery life."
+    },
+    {
+      "name": "Tablet Plus",
+      "price": 49999,
+      "image": "/images/products/Tablet plus.png",
+      "description": "A high-performance tablet featuring a 12.4-inch OLED display (120Hz), Snapdragon 8 Gen 2 processor, 8GB RAM, 256GB storage, support for stylus and keyboard attachment, and a 10,000mAh battery with 45W fast charging."
+    },
+    {
+      "name": "Gaming Console Z",
+      "price": 42999,
+      "image": "/images/products/console.jpg",
+      "description": "A next-gen gaming console with an AMD Ryzen 9 processor, 16GB GDDR6 RAM, 1TB SSD storage, support for 4K gaming at 120fps, HDR and Ray Tracing, WiFi 6, and Bluetooth 5.3."
+    },
+    {
+      "name": "Bluetooth Speaker",
+      "price": 10999,
+      "image": "/images/products/Bluetooth Speaker.jpg",
+      "description": "A powerful portable Bluetooth speaker with dual 10W drivers for deep bass, Bluetooth 5.0 connectivity, IP67 waterproof and dustproof rating, up to 20 hours of playtime, and USB-C fast charging."
+    },
+    {
+      "name": "4K Smart TV",
+      "price": 79999,
+      "image": "/images/products/electronics.png",
+      "description": "A 55-inch 4K UHD OLED Smart TV featuring Dolby Vision, 120Hz refresh rate, HDR10+ support, built-in voice assistant and app store, WiFi 6, HDMI 2.1, USB ports, and Dolby Atmos surround sound."
+    },
+    {
+      "name": "VR Headset",
+      "price": 34999,
+      "image": "/images/products/VR headset.jpg",
+      "description": "A high-end virtual reality headset with 4K resolution per eye, 120-degree field of view, built-in spatial audio, advanced motion tracking, and compatibility with PC and gaming consoles."
+    },
+    {
+      "name": "Noise Cancelling Headphones",
+      "price": 24999,
+      "image": "/images/products/Noise Cancelling Headphones.webp",
+      "description": "• Active noise cancellation (ANC)  \n• 40mm drivers with deep bass  \n• Bluetooth 5.2 with multipoint connection  \n• Up to 35 hours battery life  \n• Fast charging via USB-C  \n• Foldable design with premium build"
+    },
+    {
+      "name": "Portable Charger",
+      "price": 4999,
+      "image": "/images/products/Portable Charger.jpg",
+      "description": "• 20,000mAh high-capacity battery  \n• USB-C PD and QC 3.0 fast charging  \n• Dual USB output ports  \n• Compact and lightweight design  \n• LED battery indicator"
+    },
+    {
+      "name": "Smart Home Hub",
+      "price": 14999,
+      "image": "/images/products/Smart Home Hub.webp",
+      "description": "• Compatible with Alexa, Google Assistant, and HomeKit  \n• Touchscreen display for controls  \n• Connects and automates smart devices  \n• Built-in speaker and microphone  \n• WiFi and Bluetooth support"
+    },
+    {
+      "name": "Drone Pro",
+      "price": 74999,
+      "image": "/images/products/Drone Pro.jpg",
+      "description": "• 4K UHD camera with stabilization  \n• 3-axis gimbal for smooth footage  \n• 30-minute flight time per charge  \n• GPS-assisted flight and auto return  \n• Intelligent shooting modes"
+    },
+    {
+      "name": "Action Camera",
+      "price": 27999,
+      "image": "/images/products/Action Camera.jpg",
+      "description": "• 4K video recording at 60fps  \n• Waterproof up to 10m  \n• Advanced image stabilization  \n• WiFi and Bluetooth connectivity  \n• Voice control and touch display"
+    },
+    {
+      "name": "E-Reader",
+      "price": 14999,
+      "image": "/images/products/E-Reader.jpg",
+      "description": "• 7-inch E-Ink display with backlight  \n• Adjustable warm and cool lighting  \n• Weeks of battery life  \n• WiFi and Bluetooth support  \n• Supports multiple eBook formats"
+    },
+    {
+      "name": "Gaming Mouse",
+      "price": 6999,
+      "image": "/images/products/Gaming Mouse.jpg",
+      "description": "• 16,000 DPI optical sensor  \n• RGB customizable lighting  \n• Programmable buttons  \n• Ergonomic design for long gaming sessions  \n• Wired and wireless connectivity options"
+    },
+    {
+      "name": "Mechanical Keyboard",
+      "price": 9999,
+      "image": "/images/products/Mechanical Keyboard.jpg",
+      "description": "• Mechanical switches for tactile feedback  \n• RGB backlighting with multiple modes  \n• Full-size layout with N-key rollover  \n• Detachable wrist rest for comfort  \n• USB and Bluetooth connectivity"
+    },
+    {
+      "name": "Smart Light Bulbs",
+      "price": 4999,
+      "image": "/images/products/Smart Led Bulb.jpg",
+      "description": "• RGB and tunable white light  \n• WiFi and Bluetooth control via app  \n• Voice assistant compatibility  \n• Dimmable with scheduling options  \n• Energy-efficient design"
+    },
+    {
+      "name": "Wireless Charging Pad",
+      "price": 2999,
+      "image": "/images/products/Wireless Charging Pad.webp",
+      "description": "• Fast wireless charging up to 15W  \n• Qi-certified for universal compatibility  \n• Slim and portable design  \n• Overcharge and temperature protection  \n• LED indicator for charging status"
+    },
+{
+      "name": "Digital Drawing Tablet",
+      "price": 34999,
+      "image": "/images/products/E-Reader.jpg",
+      "description": "• 13-inch high-resolution touch display  \n• Pressure-sensitive stylus with tilt support  \n• USB-C and Bluetooth connectivity  \n• Works with major drawing software  \n• Lightweight and portable design"
+    },
+    {
+      "name": "Security Camera",
+      "price": 17999,
+      "image": "/images/products/Security Camera.jpg",
+      "description": "• 1080p HD video recording  \n• Motion detection with alerts  \n• Night vision and weatherproof design  \n• Two-way audio communication  \n• Cloud and local storage options"
+    },
+    {
+      "name": "Smart Door Lock",
+      "price": 15999,
+      "image": "/images/products/Smart Door Lock.jpg",
+      "description": "• Fingerprint and PIN code access  \n• Remote unlocking via app  \n• Works with Alexa and Google Assistant  \n• Built-in tamper alarm  \n• Long battery life with emergency power option"
+    },
+    {
+      "name": "Robot Vacuum",
+      "price": 34999,
+      "image": "/images/products/Robot Vacuum.jpg",
+      "description": "• Smart navigation with obstacle detection  \n• Works on carpets and hard floors  \n• WiFi-enabled app control  \n• Auto-recharge and scheduling feature  \n• High-efficiency HEPA filter"
+    },
+    {
+      "name": "Car Dash Cam",
+      "price": 11999,
+      "image": "/images/products/Car Dash Cam.jpg",
+      "description": "• 4K video recording with night vision  \n• Wide-angle lens for full coverage  \n• Loop recording and G-sensor  \n• GPS tracking and speed monitoring  \n• Supports microSD card storage"
+    },
+    {
+      "name": "Smart Thermostat",
+      "price": 16999,
+      "image": "/images/products/Smart Thermostat.jpg",
+      "description": "• Intelligent temperature scheduling  \n• WiFi and app control  \n• Works with Alexa, Google Assistant, and Apple HomeKit  \n• Energy-saving auto-adjust feature  \n• Smart sensors for room-specific control"
+    },
+    {
+      "name": "Fitness Tracker",
+      "price": 8999,
+      "image": "/images/products/Fitness Tracker.jpg",
+      "description": "• Heart rate and sleep monitoring  \n• Step counter and activity tracking  \n• Waterproof design for swimming  \n• Up to 10-day battery life  \n• Works with Android and iOS"
+    },
+    {
+      "name": "Streaming Stick",
+      "price": 5999,
+      "image": "/images/products/Streaming Stick.webp",
+      "description": "• 4K HDR streaming support  \n• Voice remote with Alexa/Google Assistant  \n• Dual-band WiFi for smooth playback  \n• Access to Netflix, Prime Video, Disney+, and more  \n• Compact and easy to set up"
+    },
+    {
+      "name": "External SSD 1TB",
+      "price": 10999,
+      "image": "/images/products/External SSD 1TB.jpg",
+      "description": "• 1TB ultra-fast NVMe storage  \n• USB-C and USB-A compatibility  \n• Shock-resistant and durable build  \n• Compact and lightweight design  \n• 1050MB/s read and 1000MB/s write speed"
+    },
+    {
+      "name": "Portable Projector",
+      "price": 25999,
+      "image": "/images/products/Portable Projector.webp",
+      "description": "• 1080p Full HD projection  \n• Built-in speakers with Dolby Audio  \n• Wireless screen mirroring  \n• Compact and travel-friendly design  \n• Works with HDMI, USB, and Bluetooth"
+    },
+{
+      "name": "USB-C Hub",
+      "price": 4999,
+      "image": "/images/products/USB-C Hub.webp",
+      "description": "• 7-in-1 multiport adapter  \n• Includes HDMI, USB 3.0, SD/microSD slots  \n• High-speed data transfer  \n• Compact and travel-friendly  \n• Compatible with Mac, Windows, and Android devices"
+    },
+    {
+      "name": "Smart Coffee Maker",
+      "price": 12999,
+      "image": "/images/products/Smart Coffee Maker.webp",
+      "description": "• WiFi-enabled with app control  \n• Compatible with Alexa and Google Assistant  \n• Programmable brewing schedule  \n• Adjustable brew strength settings  \n• Auto shut-off and self-cleaning function"
+    },
+    {
+      "name": "Electric Toothbrush",
+      "price": 5999,
+      "image": "/images/products/Electric Toothbrush.jpg",
+      "description": "• Sonic cleaning technology  \n• 3 brushing modes (sensitive, clean, deep clean)  \n• Smart timer with quadrant alerts  \n• Long battery life (up to 30 days per charge)  \n• Waterproof and ergonomic design"
+    },
+    {
+      "name": "Wireless Gaming Controller",
+      "price": 6999,
+      "image": "/images/products/Wireless Gaming Controller.jpg",
+      "description": "• Ergonomic design with responsive buttons  \n• Bluetooth connectivity for PC, console, and mobile  \n• Vibration feedback for immersive gaming  \n• Rechargeable battery with long life  \n• Customizable button mapping"
+    },
+    {
+      "name": "Smart Scale",
+      "price": 5999,
+      "image": "/images/products/Smart Scale.jpg",
+      "description": "• Tracks weight, BMI, muscle mass, and more  \n• Syncs with fitness apps via Bluetooth  \n• Multi-user support with automatic recognition  \n• High-precision sensors for accuracy  \n• Sleek and modern glass design"
+    },
+    {
+      "name": "Mini PC",
+      "price": 27999,
+      "image": "/images/products/Mini PC.jpg",
+      "description": "• Intel Core i5 processor  \n• 8GB RAM, 256GB SSD storage  \n• Dual HDMI for dual-screen support  \n• WiFi 6 and Bluetooth 5.0 connectivity  \n• Compact and energy-efficient"
+    },
+    {
+      "name": "Home Theater System",
+      "price": 64999,
+      "image": "/images/products/Home Theater System.jpg",
+      "description": "• 5.1 surround sound with Dolby Atmos  \n• Wireless subwoofer for deep bass  \n• HDMI ARC and optical input  \n• Bluetooth and WiFi streaming  \n• Remote control and mobile app support"
+    },
+    {
+      "name": "Smart Mirror",
+      "price": 29999,
+      "image": "/images/products/Smart Mirror.jpg",
+      "description": "• Interactive touch display  \n• Built-in smart assistant (Alexa/Google Assistant)  \n• Weather updates, fitness tracking, and calendar  \n• LED lighting with adjustable brightness  \n• Anti-fog and waterproof design"
+    },
+    {
+      "name": "Electric Scooter",
+      "price": 79999,
+      "image": "/images/products/Electric Scooter.jpg",
+      "description": "• 500W motor with max speed of 25 km/h  \n• Long-range battery (up to 40 km)  \n• Foldable and lightweight design  \n• LED display with speed and battery status  \n• Shock-absorbing tires for a smooth ride"
+    },
+    {
+      "name": "3D Printer",
+      "price": 49999,
+      "image": "/images/products/3D Printer.jpg",
+      "description": "• High-precision FDM printing  \n• Large build volume  \n• Supports PLA, ABS, and TPU filaments  \n• WiFi and SD card connectivity  \n• Auto-bed leveling for easy setup"
+    },
+ {
+      "name": "Smart Bike Helmet",
+      "price": 13999,
+      "image": "/images/products/Smart Bike Helmet.jpg",
+      "description": "• Built-in LED lights for visibility  \n• Bluetooth connectivity for hands-free calls  \n• Integrated speakers and microphone  \n• Impact-resistant design with ventilation  \n• Smart navigation alerts via mobile app"
+    },
+    {
+      "name": "Portable Air Purifier",
+      "price": 9999,
+      "image": "/images/products/Portable Air Purifier.jpeg",
+      "description": "• HEPA filtration for clean air  \n• Compact and travel-friendly design  \n• USB rechargeable battery  \n• Removes allergens, dust, and smoke  \n• Silent operation with night mode"
+    },
+    {
+      "name": "Handheld Vacuum",
+      "price": 8999,
+      "image": "/images/products/Handheld Vacuum.jpg",
+      "description": "• Powerful suction with cyclone technology  \n• Lightweight and cordless design  \n• Washable HEPA filter  \n• Long-lasting rechargeable battery  \n• Multiple attachments for versatile cleaning"
+    },
+    {
+      "name": "Laser Printer",
+      "price": 24999,
+      "image": "/images/products/Laser Printer.jpg",
+      "description": "• High-speed monochrome and color printing  \n• Wireless and Ethernet connectivity  \n• Automatic duplex printing  \n• Large paper capacity with fast output  \n• Energy-efficient design"
+    },
+    {
+      "name": "Video Doorbell",
+      "price": 15999,
+      "image": "/images/products/Video Doorbell.jpg",
+      "description": "• 1080p HD video with night vision  \n• Two-way audio communication  \n• Motion detection alerts  \n• Cloud and local storage options  \n• Weather-resistant design"
+    },
+    {
+      "name": "Smart Pet Feeder",
+      "price": 9999,
+      "image": "/images/products/Smart Pet Feeder.jpg",
+      "description": "• Automatic feeding with portion control  \n• App control and scheduling  \n• Built-in camera for monitoring pets  \n• Voice recording for feeding alerts  \n• Large food storage capacity"
+    },
+    {
+      "name": "Noise Machine",
+      "price": 4999,
+      "image": "/images/products/Noise Machine.jpg",
+      "description": "• 20+ soothing sound options  \n• Adjustable volume and timer settings  \n• Compact and travel-friendly  \n• USB and battery-powered  \n• Ideal for sleep, meditation, and focus"
+    },
+    {
+      "name": "Smart Garden Kit",
+      "price": 21999,
+      "image": "/images/products/Smart Garden Kit.jpg",
+      "description": "• Automated watering and LED grow lights  \n• App-controlled plant care  \n• Supports herbs, vegetables, and flowers  \n• Energy-efficient and self-sustaining  \n• Compact design for indoor use"
+    },
+    {
+      "name": "Digital Notepad",
+      "price": 14999,
+      "image": "/images/products/Digital Notepad.jpg",
+      "description": "• E-ink display for paper-like writing  \n• Syncs with cloud storage  \n• Long battery life (weeks per charge)  \n• Lightweight and portable  \n• Supports stylus input with handwriting recognition"
+    },
+    {
+      "name": "Wireless HDMI Extender",
+      "price": 12999,
+      "image": "/images/products/Wireless HDMI Extender.jpg",
+      "description": "• Wireless 4K video streaming  \n• Low-latency for gaming and presentations  \n• Plug-and-play setup  \n• Up to 30m transmission range  \n• Compatible with TVs, projectors, and laptops"
+    }
+  ]
+}

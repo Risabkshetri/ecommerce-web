@@ -81,6 +81,8 @@ export default function GadgetItem({
               <DialogContent>
                 <DialogHeader>
                   <DialogTitle>Customize {name}</DialogTitle>
+                  <DialogTitle>Price: {price}</DialogTitle>
+
                 </DialogHeader>
 
                 <div className="flex items-center space-x-4">

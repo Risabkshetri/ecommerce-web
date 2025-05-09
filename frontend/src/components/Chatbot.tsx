@@ -3,6 +3,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from "@/components/ui/button";
+import electronicsGadgets from "../../data/dummydata.json"
+
 import { 
   XIcon, 
   SendIcon, 
@@ -28,15 +30,25 @@ interface ChatCompletionResponse {
 
 const AIChatbot: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [products, setProducts] = useState([])
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputMessage, setInputMessage] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
+  useEffect(() => {
+    setProducts(electronicsGadgets)
+  }, []);
+  
   const companyContextPrompt: string = `
 
-You are an AI assistant for Electro Store. Structure your responses in the following format:
+You are an AI assistant for Electro Store. You have access to the following product catalog:
 
+[PRODUCT_CATALOG]
+${JSON.stringify(products, null, 2)}
+[/PRODUCT_CATALOG]
+
+Structure your responses in the following format:
 [THINKING]
 First, provide your thought process about the question in 2-3 sentences.
 
