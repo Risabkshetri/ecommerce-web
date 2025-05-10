@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8080/api/products';
+const BASE_URL = 'https://e-commerce-backend-lkt8.onrender.com/api/products';
 
 
 export interface Product {

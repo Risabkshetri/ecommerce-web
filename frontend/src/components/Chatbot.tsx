@@ -30,14 +30,14 @@ interface ChatCompletionResponse {
 
 const AIChatbot: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState<any[]>([])
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputMessage, setInputMessage] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    setProducts(electronicsGadgets)
+    setProducts(electronicsGadgets.electronicsGadgets || [])
   }, []);
   
   const companyContextPrompt: string = `
